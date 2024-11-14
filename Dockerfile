@@ -11,7 +11,6 @@ RUN pip install --upgrade pip
     #copy to code directory
 COPY . /code    
 
-
 RUN chmod +x /code/src
 
 RUN pip install --no-cache-dir --upgrade -r code/src/house_pricing/requirements.txt
@@ -20,8 +19,6 @@ RUN pip install --no-cache-dir --upgrade -r code/src/house_pricing/requirements.
 #VOLUME /code/src/churn_prediction_pipeline/trained_model
 # Declare the directory as a volume
 #VOLUME /code/src/churn_prediction_pipeline/logs
-
-
 
 # Create the input-files directory
 #RUN mkdir -p /input-files
@@ -40,9 +37,6 @@ ENV PYTHONPATH "${PYTHONPATH}:/code/src"
 
 
 ENTRYPOINT ["python", "src/house_pricing/main.py"]
-
-
-
 
 #CMD ["pytest"]
 
