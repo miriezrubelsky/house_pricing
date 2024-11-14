@@ -6,7 +6,6 @@ RUN apt-get update && apt-get install -y \
     libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 
-
 RUN pip install --upgrade pip 
     #copy to code directory
 COPY . /code    
