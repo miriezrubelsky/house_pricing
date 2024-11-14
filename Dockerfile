@@ -11,7 +11,6 @@ RUN pip install --upgrade pip
 COPY . /code    
 
 RUN chmod +x /code/src
-
 RUN pip install --no-cache-dir --upgrade -r code/src/house_pricing/requirements.txt
 
 # Declare the directory as a volume
@@ -21,7 +20,6 @@ RUN pip install --no-cache-dir --upgrade -r code/src/house_pricing/requirements.
 
 # Create the input-files directory
 #RUN mkdir -p /input-files
-
 
 # Dockerfile
 #RUN mkdir -p /output-files && chmod -R 777 /output-files
