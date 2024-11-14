@@ -41,9 +41,6 @@ ENV PYTHONPATH "${PYTHONPATH}:/code/src"
 
 ENTRYPOINT ["python", "src/house_pricing/main.py"]
 
-
-
-
 #CMD ["pytest"]
 
 # Default command to provide flexibility if no arguments are passed
