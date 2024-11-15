@@ -27,8 +27,8 @@ jobs:
         run: |
           git config --global user.name "Your GitHub Actions Bot"
           git config --global user.email "actions@github.com"
-          git add src/house_pricing/model.pkl
-          git commit -m "Add updated model.pkl"
+          git add src/house_pricing/classification.pkl
+          git commit -m "Add updated classification.pkl"
           git push origin develop  # Push to the develop branch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
