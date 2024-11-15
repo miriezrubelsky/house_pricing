@@ -5,7 +5,7 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "develop" ]
   workflow_dispatch:
 jobs:
   build:
@@ -21,6 +21,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r src/house_pricing/requirements.txt
-      - name: Run tests  # Run tests using pytest
+      - name: Run build  # Run tests using pytest
         run: python src/house_pricing/main.py
         
