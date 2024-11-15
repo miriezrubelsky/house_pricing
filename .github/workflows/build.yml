@@ -23,4 +23,12 @@ jobs:
           pip install -r src/house_pricing/requirements.txt
       - name: Run build  # Run tests using pytest
         run: python src/house_pricing/main.py
-        
+      - name: Add .pkl file to git
+        run: |
+          git config --global user.name "Your GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          git add src/house_pricing/model.pkl
+          git commit -m "Add updated model.pkl"
+          git push origin develop  # Push to the develop branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
