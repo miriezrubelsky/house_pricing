@@ -9,6 +9,8 @@ on:
   workflow_dispatch:
 permissions:
   contents: write  
+env:
+  IMAGE_NAME: miriezrubelsky/house-pricing-app  # Define an environment variable for the Docker image name  
 jobs:
   build:
    
